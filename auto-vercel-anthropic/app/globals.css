@@ -8,8 +8,9 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-landing-display: var(--font-landing-display, var(--font-dm-sans));
+  --font-landing-body: var(--font-landing-body, var(--font-dm-sans));
+  --font-landing-mono: var(--font-landing-mono, var(--font-jetbrains-mono));
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,5 +23,42 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Per-version font pairing */
+[data-version="1"] {
+  --font-landing-display: var(--font-instrument-serif);
+  --font-landing-body: var(--font-dm-sans);
+}
+
+[data-version="2"] {
+  --font-landing-display: var(--font-cormorant);
+  --font-landing-body: var(--font-dm-sans);
+}
+
+[data-version="3"] {
+  --font-landing-display: var(--font-fraunces);
+  --font-landing-body: var(--font-fraunces);
+}
+
+[data-version="4"] {
+  --font-landing-display: var(--font-jetbrains-mono);
+  --font-landing-body: var(--font-jetbrains-mono);
+  --font-landing-mono: var(--font-jetbrains-mono);
+}
+
+[data-version="5"] {
+  --font-landing-display: var(--font-nunito);
+  --font-landing-body: var(--font-nunito);
+}
+
+/* Reduced motion: shorten or disable animations */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

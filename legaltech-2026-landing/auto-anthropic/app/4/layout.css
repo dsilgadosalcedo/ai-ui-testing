@@ -1,0 +1,40 @@
+.theme-luxury {
+  --bg: #0c0b0a;
+  --text: #f5f0e8;
+  --muted: #9a958a;
+  --accent: #c9a962;
+  --accent-soft: rgba(201, 169, 98, 0.2);
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body), ui-sans-serif, sans-serif;
+  min-height: 100vh;
+}
+
+.theme-luxury h1,
+.theme-luxury h2,
+.theme-luxury .font-display {
+  font-family: var(--font-display), ui-serif, serif;
+}
+
+.theme-luxury .font-display {
+  font-weight: 300;
+}
+
+@keyframes softFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.theme-luxury [data-fade] {
+  animation: softFadeIn 0.8s ease-out forwards;
+}
+
+.theme-luxury [data-fade="1"] { animation-delay: 0.15s; opacity: 0; }
+.theme-luxury [data-fade="2"] { animation-delay: 0.3s; opacity: 0; }
+.theme-luxury [data-fade="3"] { animation-delay: 0.45s; opacity: 0; }

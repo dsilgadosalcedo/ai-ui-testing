@@ -1,0 +1,15 @@
+.theme-brutalist {
+  --bg: #0d0d0d;
+  --text: #f2f2f2;
+  --muted: #a3a3a3;
+  --accent: #e63946;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-mono), ui-monospace, monospace;
+  min-height: 100vh;
+}
+
+.theme-brutalist h1,
+.theme-brutalist h2 {
+  font-family: var(--font-serif), ui-serif, serif;
+}

@@ -24,3 +24,29 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Subtle brutalist reveal: opacity + translateY only (compositor-friendly) */
+@keyframes brutalist-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .animate-brutalist-reveal {
+    animation: brutalist-reveal 0.35s linear both;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-brutalist-reveal {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}

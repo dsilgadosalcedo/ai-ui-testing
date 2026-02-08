@@ -25,12 +25,13 @@ export default function Edition2() {
       <div className="mx-auto max-w-5xl px-6 py-10">
         <Link
           href="/"
-          className="mb-8 inline-block text-sm text-white/70 underline decoration-white/40 underline-offset-2 transition-colors hover:text-white hover:decoration-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+          className="animate-brutalist-reveal mb-8 inline-block text-sm text-white/70 underline decoration-white/40 underline-offset-2 transition-colors hover:text-white hover:decoration-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+          style={{ animationDelay: "0ms" }}
         >
           ← All editions
         </Link>
 
-        <header className="mb-12">
+        <header className="mb-12 animate-brutalist-reveal" style={{ animationDelay: "60ms" }}>
           <h1 className="text-5xl font-bold uppercase tracking-tighter sm:text-7xl">
             {masthead}
           </h1>
@@ -41,7 +42,10 @@ export default function Edition2() {
 
         <main className="space-y-16">
           <article className="grid gap-10 sm:grid-cols-2">
-            <div className="border-l-4 border-white py-2 pl-6">
+            <div
+              className="animate-brutalist-reveal border-l-4 border-white py-2 pl-6"
+              style={{ animationDelay: "120ms" }}
+            >
               <p className="text-xs font-semibold uppercase tracking-widest text-white/50">
                 {lead.section}
               </p>
@@ -55,7 +59,11 @@ export default function Edition2() {
             </div>
             <div className="flex flex-col justify-end space-y-6 sm:justify-start">
               {secondaries.map((item, i) => (
-                <div key={i} className="border-b border-white/20 pb-4 last:border-0">
+                <div
+                  key={i}
+                  className="animate-brutalist-reveal border-b border-white/20 pb-4 last:border-0"
+                  style={{ animationDelay: `${180 + i * 50}ms` }}
+                >
                   <p className="text-[10px] font-semibold uppercase tracking-widest text-white/40">
                     {item.section}
                   </p>

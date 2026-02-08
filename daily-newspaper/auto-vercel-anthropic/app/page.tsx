@@ -11,7 +11,7 @@ export default function Home() {
           Choose a design
         </p>
         <nav className="flex flex-wrap justify-center gap-3" aria-label="Editions">
-          {[1, 2, 3, 4, 5].map((n) => (
+          {[1, 2, 3, 4, 5, 6].map((n) => (
             <Link
               key={n}
               href={`/${n}`}
